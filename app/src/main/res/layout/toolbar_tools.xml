@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    // menu
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/SplashScreenBg"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/tools_drawer_menu_button_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_menu"
+                android:layout_marginBottom="8dp"/>
+
+        </LinearLayout>
+
+        // Scan Area
+        <LinearLayout
+            android:id="@+id/tools_scan_button_id"
+            android:paddingTop="15dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_qr_code_scan" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scan"
+                android:textSize="20sp"
+                android:fontFamily="@font/junicode"
+                android:textColor="#ffffff"
+                android:layout_marginTop="3dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tools_tools_button_id"
+            android:paddingTop="15dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tools"
+                android:textSize="20sp"
+                android:fontFamily="@font/junicode"
+                android:textColor="#ffffff"
+                android:layout_marginTop="3dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    // indicator
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/SplashScreenBg"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+        </LinearLayout>
+
+        // Scan Area
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <View
+                android:background="@color/SplashScreenBg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <View
+                android:background="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    // underLine
+    <View
+        android:background="#252323"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+</LinearLayout>

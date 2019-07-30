@@ -32,4 +32,7 @@ dependencies {
     // for Navigation menu bar
     implementation 'com.android.support:design:29.0.0'
 
+    // for circle image view
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
 }

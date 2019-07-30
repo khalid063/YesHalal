@@ -2,18 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_home"
-        android:icon="@drawable/ic_menu"
-        android:title="Home" />
+        android:id="@+id/nav_explore"
+        android:icon="@drawable/ic_explore"
+        android:title="Explore" />
 
     <item
-        android:id="@+id/nav_setting"
-        android:icon="@drawable/ic_qr_code_scan"
-        android:title="Setting" />
+        android:id="@+id/nav_new_product"
+        android:icon="@drawable/ic_new_product"
+        android:title="Latest Product" />
 
     <item
-        android:id="@+id/nav_notification"
+        android:id="@+id/nav_document"
+        android:icon="@drawable/ic_document"
+        android:title="Derectory Selection" />
+
+    <item
+        android:id="@+id/nav_settings"
         android:icon="@drawable/ic_settings"
-        android:title="Notification" />
+        android:title="My Stats" />
+
+    <item
+        android:id="@+id/nav_annonymous"
+        android:icon="@drawable/ic_annonymous"
+        android:title="My History" />
 
 </menu>
