@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/home_id"
+            android:icon="@drawable/ic_settings"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/profile_id"
+            android:icon="@drawable/ic_settings"
+            android:title="Profile" />
+        <item
+            android:id="@+id/chat_id"
+            android:icon="@drawable/ic_settings"
+            android:title="Chat" />
+
+    </group>
+
+    <item android:title="Communication">
+
+        <menu>
+            <item
+                android:id="@+id/location_id"
+                android:icon="@drawable/ic_settings"
+                android:title="Location" />
+            <item
+                android:id="@+id/music_id"
+                android:icon="@drawable/ic_settings"
+                android:title="Music" />
+        </menu>
+
+    </item>
+
+</menu>

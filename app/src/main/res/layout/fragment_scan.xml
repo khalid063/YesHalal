@@ -1,619 +1,644 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.ScanFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    // Toolbar Area
-    <RelativeLayout
-        android:id="@+id/home_toolbar"
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <include layout="@layout/toolbar_scan"/>
-    </RelativeLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:background="#C0C9D0"
+            android:id="@+id/nav_view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/head_drawer_nav_menu"
+            app:menu="@menu/drawer_nav_menu"/>
 
-
-    // body area
-    <RelativeLayout
-        android:layout_above="@id/bottom_navigation"
-        android:layout_below="@id/home_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        // Top part Area
-
-        <androidx.core.widget.NestedScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            // Main Wrapper
 
-            <LinearLayout
+            <!-- TODO: Update blank fragment layout -->
+            // Toolbar Area
+            <RelativeLayout
+                android:id="@+id/home_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
+                <include layout="@layout/toolbar_scan"/>
+            </RelativeLayout>
+
+
+            // body area
+            <RelativeLayout
+                android:layout_above="@id/bottom_navigation"
+                android:layout_below="@id/home_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                // Top part Area
+
+                <androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="170dp"
-                    android:background="#F0F4F7"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/junicode"
-                            android:gravity="center"
-                            android:paddingTop="10dp"
-                            android:paddingBottom="5dp"
-                            android:text="Trending Products"
-                            android:textSize="20sp" />
-
-                    </LinearLayout>
+                    android:layout_height="match_parent">
+                    // Main Wrapper
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:weightSum="3">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/square">
-
-                            <TextView
-                                android:background="#00E901"
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:text="Test"
-                                android:textSize="15sp"
-                                android:gravity="center"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/square">
-
-                            <TextView
-                                android:background="#00E901"
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:text="fd"
-                                android:textSize="15sp"
-                                android:gravity="center"/>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginBottom="10dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/square">
-
-                            <TextView
-                                android:background="#00E901"
-                                android:layout_width="match_parent"
-                                android:layout_height="30dp"
-                                android:text="sd"
-                                android:textSize="15sp"
-                                android:gravity="center"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                // Scanner Area
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:background="@drawable/mos9"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_marginTop="30dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="85dp"
-                        android:gravity="center_horizontal"
                         android:orientation="vertical">
 
-                        <ImageView
-
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:src="@drawable/ic_photo_camera" />
-
-                        <TextView
-                            android:layout_width="80dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="-45dp"
-                            android:background="@color/SplashScreenBg"
-                            android:gravity="center"
-                            android:text="Scan QR"
-                            android:textColor="#ffffff"
-                            android:textSize="15sp" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginRight="20dp"
-                        android:background="#ffffff"
-                        android:elevation="5dp"
-                        android:weightSum="10">
-
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.5"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:paddingTop="4dp"
-                                android:src="@drawable/ic_search" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="7">
-
-                            <EditText
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@null"
-                                android:focusableInTouchMode="true"
-                                android:hint="Search on Yes Halal" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.5"
-                            android:gravity="center">
-
-                            <ImageView
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:paddingTop="4dp"
-                                android:src="@drawable/ic_microphone" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                // Show Prodect Area
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="195dp"
-                    android:background="#C0C9D0"
-                    android:orientation="vertical">
-                    // heading Area
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:background="#C0C9D0"
-                        android:orientation="horizontal">
-
-                        <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="170dp"
+                            android:background="#F0F4F7"
+                            android:orientation="vertical">
 
-                            <RelativeLayout
-                                android:id="@+id/text_id_1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentRight="true"
-                                android:layout_centerVertical="true">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:paddingRight="5dp"
-                                    android:text="Some Text"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp" />
-
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:id="@+id/text_id_2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_centerVertical="true">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
 
                                 <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="Scan Happening Now"
-                                    android:textColor="#000000"
-                                    android:textSize="15sp"
-                                    android:textStyle="bold" />
+                                    android:fontFamily="@font/junicode"
+                                    android:gravity="center"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="5dp"
+                                    android:text="Trending Products"
+                                    android:textSize="20sp" />
 
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:id="@+id/text_id_3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentLeft="true"
-                                android:layout_centerVertical="true">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:paddingLeft="5dp"
-                                    android:text="Some text"
-                                    android:textColor="#000000"
-                                    android:textSize="12sp" />
-
-                            </RelativeLayout>
-
-                        </RelativeLayout>
-
-                    </LinearLayout>
-                    // first Product Area
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="#E6E6E6"
-                        android:weightSum="10">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.6">
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_margin="6dp"
-                                android:background="@drawable/square">
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/square">
+
+                                    <TextView
+                                        android:background="#00E901"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:text="Test"
+                                        android:textSize="15sp"
+                                        android:gravity="center"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/square">
+
+                                    <TextView
+                                        android:background="#00E901"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:text="fd"
+                                        android:textSize="15sp"
+                                        android:gravity="center"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/square">
+
+                                    <TextView
+                                        android:background="#00E901"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:text="sd"
+                                        android:textSize="15sp"
+                                        android:gravity="center"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        // Scanner Area
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/mos9"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_marginTop="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="85dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
 
                                 <ImageView
-                                    android:layout_width="wrap_content"
+
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_photo_camera" />
+
+                                <TextView
+                                    android:layout_width="80dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:src="@drawable/foor_product_1" />
+                                    android:layout_marginTop="-45dp"
+                                    android:background="@color/SplashScreenBg"
+                                    android:gravity="center"
+                                    android:text="Scan QR"
+                                    android:textColor="#ffffff"
+                                    android:textSize="15sp" />
+
+
                             </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3.5">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="Pran Chocolet Box" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4.5">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom"
-                                android:paddingLeft="5dp"
-                                android:paddingBottom="5dp"
-                                android:text="Scaned in Californid" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                    // Second Product Area
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="#E6E6E6"
-                        android:weightSum="10">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.6">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_margin="6dp"
-                                android:background="@drawable/square">
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:background="#ffffff"
+                                android:elevation="5dp"
+                                android:weightSum="10">
 
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:src="@drawable/foor_product_1" />
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:paddingTop="4dp"
+                                        android:src="@drawable/ic_search" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="7">
+
+                                    <EditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@null"
+                                        android:focusableInTouchMode="true"
+                                        android:hint="Search on Yes Halal" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.5"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:paddingTop="4dp"
+                                        android:src="@drawable/ic_microphone" />
+
+                                </LinearLayout>
+
                             </LinearLayout>
-                        </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3.5">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="Pran Chocolet Box" />
 
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4.5">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom"
-                                android:paddingLeft="5dp"
-                                android:paddingBottom="5dp"
-                                android:text="Scaned in Californid" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-                    // Third Product Area
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:background="#E6E6E6"
-                        android:weightSum="10">
+                        // Show Prodect Area
 
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1.6">
+                            android:layout_width="match_parent"
+                            android:layout_height="195dp"
+                            android:background="#C0C9D0"
+                            android:orientation="vertical">
+                            // heading Area
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_margin="6dp"
-                                android:background="@drawable/square">
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="#C0C9D0"
+                                android:orientation="horizontal">
 
-                                <ImageView
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/text_id_1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingRight="5dp"
+                                            android:text="Some Text"
+                                            android:textColor="#000000"
+                                            android:textSize="12sp" />
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/text_id_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_centerVertical="true">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Scan Happening Now"
+                                            android:textColor="#000000"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/text_id_3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_centerVertical="true">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:paddingLeft="5dp"
+                                            android:text="Some text"
+                                            android:textColor="#000000"
+                                            android:textSize="12sp" />
+
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                            // first Product Area
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="#E6E6E6"
+                                android:weightSum="10">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="6dp"
+                                        android:background="@drawable/square">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="5dp"
+                                            android:src="@drawable/foor_product_1" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3.5">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="Pran Chocolet Box" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4.5">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="bottom"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Scaned in Californid" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            // Second Product Area
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="#E6E6E6"
+                                android:weightSum="10">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="6dp"
+                                        android:background="@drawable/square">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="5dp"
+                                            android:src="@drawable/foor_product_1" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3.5">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="Pran Chocolet Box" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4.5">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="bottom"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Scaned in Californid" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            // Third Product Area
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="#E6E6E6"
+                                android:weightSum="10">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.6">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="6dp"
+                                        android:background="@drawable/square">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="5dp"
+                                            android:src="@drawable/foor_product_1" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3.5">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="Pran Chocolet Box" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4.5">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="bottom"
+                                        android:paddingLeft="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="Scaned in Californid" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        // Scroll show product area
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:gravity="center">
+
+                                <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_margin="5dp"
-                                    android:src="@drawable/foor_product_1" />
+                                    android:fontFamily="@font/junicode"
+                                    android:text="Shop Explorer"
+                                    android:textColor="#000000"
+                                    android:textSize="15sp" />
+
                             </LinearLayout>
-                        </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3.5">
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:text="Pran Chocolet Box" />
+                                android:layout_height="70dp"
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:weightSum="10">
+                                // Image One
 
-                        </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:gravity="center">
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="4.5">
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="55dp"
+                                        android:layout_height="55dp"
+                                        android:elevation="5dp"
+                                        android:src="@drawable/product_2"
+                                        app:civ_border_color="#84BAF1"
+                                        app:civ_border_width="2dp" />
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="bottom"
-                                android:paddingLeft="5dp"
-                                android:paddingBottom="5dp"
-                                android:text="Scaned in Californid" />
+                                </LinearLayout>
+
+                                // Image One
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:gravity="center">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="55dp"
+                                        android:layout_height="55dp"
+                                        android:elevation="5dp"
+                                        android:src="@drawable/p4"
+                                        app:civ_border_color="#84BAF1"
+                                        app:civ_border_width="2dp" />
+
+                                </LinearLayout>
+
+                                // Image One
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:gravity="center">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="55dp"
+                                        android:layout_height="55dp"
+                                        android:elevation="5dp"
+                                        android:src="@drawable/p5"
+                                        app:civ_border_color="#84BAF1"
+                                        app:civ_border_width="2dp" />
+
+                                </LinearLayout>
+
+                                // Image One
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:gravity="center">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="55dp"
+                                        android:layout_height="55dp"
+                                        android:elevation="5dp"
+                                        android:src="@drawable/product_2"
+                                        app:civ_border_color="#84BAF1"
+                                        app:civ_border_width="2dp" />
+
+                                </LinearLayout>
+
+                                // Image One
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:gravity="center">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="55dp"
+                                        android:layout_height="55dp"
+                                        android:elevation="5dp"
+                                        android:src="@drawable/product_2"
+                                        app:civ_border_color="#84BAF1"
+                                        app:civ_border_width="2dp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
 
                         </LinearLayout>
 
                     </LinearLayout>
 
-                </LinearLayout>
 
-                // Scroll show product area
+                </androidx.core.widget.NestedScrollView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:background="#FFFFFF"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:gravity="center">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/junicode"
-                            android:text="Shop Explorer"
-                            android:textColor="#000000"
-                            android:textSize="15sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:orientation="horizontal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:weightSum="10">
-                        // Image One
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:gravity="center">
-
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
-                                android:elevation="5dp"
-                                android:src="@drawable/product_2"
-                                app:civ_border_color="#84BAF1"
-                                app:civ_border_width="2dp" />
-
-                        </LinearLayout>
-
-                        // Image One
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:gravity="center">
-
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
-                                android:elevation="5dp"
-                                android:src="@drawable/p4"
-                                app:civ_border_color="#84BAF1"
-                                app:civ_border_width="2dp" />
-
-                        </LinearLayout>
-
-                        // Image One
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:gravity="center">
-
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
-                                android:elevation="5dp"
-                                android:src="@drawable/p5"
-                                app:civ_border_color="#84BAF1"
-                                app:civ_border_width="2dp" />
-
-                        </LinearLayout>
-
-                        // Image One
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:gravity="center">
-
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
-                                android:elevation="5dp"
-                                android:src="@drawable/product_2"
-                                app:civ_border_color="#84BAF1"
-                                app:civ_border_width="2dp" />
-
-                        </LinearLayout>
-
-                        // Image One
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:gravity="center">
-
-                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:layout_width="55dp"
-                                android:layout_height="55dp"
-                                android:elevation="5dp"
-                                android:src="@drawable/product_2"
-                                app:civ_border_color="#84BAF1"
-                                app:civ_border_width="2dp" />
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-        </androidx.core.widget.NestedScrollView>
-
-    </RelativeLayout>
+            </RelativeLayout>
 
 
 
-    //Bottom Nav Area
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_nav_menu"
-        android:background="?android:attr/windowBackground"/>
+            //Bottom Nav Area
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:menu="@menu/bottom_nav_menu"
+                android:background="?android:attr/windowBackground"/>
 
-</RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>
